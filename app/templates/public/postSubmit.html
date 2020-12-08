@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{url_for('static',filename='css/postSubmit_styles.css')}}">
+    <link rel="icon" href="{{url_for('static',filename='img/flask.png')}}">
+    <title>Email Wait Time</title>
+</head>
+<body>
+    <h1 id="header"><a href="/">Image to 3d</a></h1>
+    
+    <!-- SHOW IMAGE -->
+
+
+    <h2 class="headers">Email will be sent to {{Email}} from imageto3d@howard888.com</imageto3d></h2>
+    <h3 class="headers">Wait time is around {{waitTime}}</h3>
+    
+
+
+    <!-- RETRY BUTTON -->
+    
+    <a href="/"><button type="submit" class="btn btn-primary">Try Another Image</button></a>
+        
+    </nav>
+    <div id="WholeCreation">
+    <div id="CreatedBy">
+        <h3>Created By Me</h3>
+    </div>
+    <div id="social">
+        <a target="_blank" href="https://www.instagram.com/acwboyh/">InstaGram</a>
+        <a target="_blank" href="https://howard888.com">Website</a>
+        <a target="_blank" href="https://www.youtube.com/channel/UCYraH2wrT0WDArvqjH9vX8A">YouTube</a>
+    </div>
+    </div>  
+<script src="{{url_for('static',filename='js/app.js')}}"></script>
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{url_for('static',filename='css/styles.css')}}">
+    <link rel="icon" href="{{url_for('static',filename='img/flask.png')}}">
+    <title>ImageTo3D</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+
+</head>
+<body>
+    <h1 id="header">Image To 3D</h1>
+    
+    <div class='youtubeVid'>
+    <iframe src="https://www.youtube.com/embed/pKe7iET7h24" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <iframe src="https://www.youtube.com/embed/5Nn-3mQxEag" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+    <div class="container">
+    <form action="/" method="POST" enctype="multipart/form-data" onsubmit="return checkForm(this);">
+        <div class="form-group">
+          <div class="custom-file">
+            <input type="file" class="custom-file-input" value="images" name="images" id="images">
+            <label id='imgUploadLabel' class="custom-file-label" for="images" >Select image...</label>
+          </div>
+        </div>
+              
+        <div class="radio-toolbar">
+            <input type="radio" id="radioSwing" name="radioEffect" value="swing" checked>
+            <label for="radioSwing">Swing</label>
+
+            <input type="radio" id="radioDollyZoom" name="radioEffect" value="zoomin">
+            <label for="radioDollyZoom">Dolly Zoom</label>
+        </div>
+
+        
+        <div class="md-form" id='emailInput'>
+              <input type="email" id="email" name='email' class="form-control" placeholder="Input Your Email">
+        </div>
+        
+            <h2 id='result'></h2>
+        
+        <div>
+            <button type="submit" name="myButton" id='btnSubmit' class="btn btn-primary" disabled>Convert to 3D</button>
+        </div>     
+    </form>
+    </div>
+    
+    <script src="{{url_for('static',filename='js/checkIMGandEmail.js')}}"></script>
+    <script src="{{url_for('static',filename='js/buttonEnabler.js')}}"></script>
+
+
+    <nav id="emailPart">  
+        <div id='emailSteps'>
+            <a>Simply Upload an Image under 5 MBs </a><br>
+            <a>Choose Swing or Dolly Zoom 3d effect</a><br>
+            <a>Input your email Where you want the 3d video to go to</a><br>
+            <a>Then click Convert To 3d</a>
+        </div>
+        
+    </nav>
+    <div id="WholeCreation">
+    <div id="CreatedBy">
+        <h3>Created By Me</h3>
+    </div>
+    <div id="social">
+        <a target="_blank" href="https://www.instagram.com/acwboyh/">InstaGram</a>
+        <a target="_blank" href="https://howard888.com">Website</a>
+        <a target="_blank" href="https://www.youtube.com/channel/UCYraH2wrT0WDArvqjH9vX8A">YouTube</a>
+    </div>
+    </div>  
+</body>
+</html>
